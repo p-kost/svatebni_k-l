@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Euphoria+Script&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Fenek a Lasice</title>
+<!--    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />  -->
+
+</head>
+
+<body>
+    <div clas="main">
+
+        <header class="uvodni">
+            
+            <div>
+                <nav id='menu'>
+                    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+                    <ul>
+                      <li><a href='#zakladni'>Základní informace</a></li>
+                      <li><a href='#misto'>Místo</a></li>
+                      <li><a href='#harmonogram'>Harmonogram</a></li>
+                      <li><a href='#osoby'>Osoby</a></li>
+                    </ul>
+                  </nav>
+            </div>
+
+            <div class="jmena">
+                <h1>Lukáš a Kristina</h1>
+                <h2>26. 8. 2023</h2>
+            </div>
+            
+            <p id="odpocet"></p>
+
+        </header>
+
+        <section class="zakladni" id="zakladni">
+            <h3>Základní informace</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Aliquam erat volutpat. Proin mattis lacinia justo. Duis pulvinar. Etiam quis quam. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce consectetuer risus a nunc.</p>
+        </section>
+
+        <section class="misto" id="misto">
+            <h3>Místo</h3>
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2615.6728349017785!2d16.42110481556166!3d49.035829179305296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x23b4ed8157b5cbd3%3A0x1360023852ae066!2sStodola%20pod%20lesem!5e0!3m2!1scs!2scz!4v1679934932386!5m2!1scs!2scz" 
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+
+        </section>
+
+        <section class="harmonogram" id="harmonogram">
+            <h3>Harmonogram</h3>
+
+            <table>
+                <tr>
+                  <td class="levy">15:00 - </td>
+                  <td class="pravy">možnost přijet kvůli zabydlení</td>
+                </tr>
+                <tr>
+                    <td class="levy">16:30 - </td>
+                    <td class="pravy">obřad</td>
+                </tr>
+                <tr>
+                    <td class="levy">17:30 - </td>
+                    <td class="pravy">hromadné focení</td>
+                </tr>
+                <tr>
+                    <td class="levy">18:00 - </td>
+                    <td class="pravy">společný přípitek následovaný rautem</td>
+                </tr>
+                <tr>
+                    <td class="levy">19:40 - </td>
+                    <td class="pravy">první tanec</td>
+                </tr>
+            </table>
+
+
+
+
+        </section>
+
+        <section class="osoby" id="osoby">
+            <h3>Osoby</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Aliquam erat volutpat. Proin mattis lacinia justo. Duis pulvinar. Etiam quis quam. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce consectetuer risus a nunc.</p>
+
+        </section>
+
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
