@@ -1,5 +1,4 @@
 
-
 // Set the date we're counting down to
 var countDownDate = new Date("Aug 26, 2023 16:30:00").getTime();
 
@@ -19,25 +18,12 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="odpocet"
-  document.getElementById("odpocet").innerHTML = days + " dní " + hours + " hodin "
-  + minutes + " minut " + seconds + " sekund ";
+  document.getElementById("odpocet").innerHTML = days + " dní  " + hours + " hodin  "
+  + minutes + " minut  " + seconds + " sekund ";
     
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("demo").innerHTML = "";
   }
 }, 1000);
-
-
-//menu
-
-
-function updatemenu() {
-  if (document.getElementById('responsive-menu').checked == true) {
-    document.getElementById('menu').style.borderBottomRightRadius = '0';
-    document.getElementById('menu').style.borderBottomLeftRadius = '0';
-  }else{
-    document.getElementById('menu').style.borderRadius = '30px';
-  }
-}

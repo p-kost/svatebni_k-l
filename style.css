@@ -23,106 +23,32 @@ na modrém pozadí žlutý nadpis a text v bledě růžové
 
 body{
     text-align: center;
-    font-family: EB Garamond;
-}
-
-h1, h2, h3 {
-    font-family: Euphoria Script;
-    margin: 0;
-    padding: 15px;
-}
-
-h1, h2{
-    text-shadow: -1px -2px 4px rgba(252, 193, 115, 1),2px 11px 11px rgba(255, 195, 116, 1);
+    font-family: 'EB Garamond', serif;
 }
 
 h1 {
-    font-size: 60px;
-}
-
-h2 {
-    font-size: 50px;
-}
-
-h3 {
-    font-size: 30px;
-}
-
-p {
+    font-family: 'Euphoria Script', cursive;
     margin: 0;
+    padding: 15px;
+	font-size: 40px;
 }
 
+a {
+	color: var(--barva-modra);	
+}
 
-/* menu */
-
-#menu {
-	background: var(--barva-modra);
-	height: 58px;
-	padding-left: 18px;
-}
-#menu ul, #menu li {
-	margin: 0 auto;
-	padding: 0;
-	list-style: none
-}
-#menu ul {
-	width: 100%;
-}
-#menu li {
-	float: left;
-	display: inline;
-	position: relative;
-}
-#menu a {
-	display: block;
-	line-height: 58px;
-	padding: 0 14px;
-	text-decoration: none;
+a:hover {
 	color: var(--barva-zluta);
-	font-size: 20px;
+	background-color: var(--barva-modra);
 }
 
-#menu li a:hover {
-	color: var(--barva-modra);
-	background: var(--barva-zluta);
-}
-#menu input {
-	display: none;
-	margin: 0;
-	padding: 0;
-	height: 58px;
-	width: 100%;
-	opacity: 0;
-	cursor: pointer
-}
-#menu label {
-	display: none;
-	line-height: 58px;
-	text-align: center;
-	position: absolute;
-	left: 35px
-}
-#menu label:before {
-	font-size: 1.6em;
-	content: "\2261"; 
-	margin-left: 20px;
+img {
+	font-weight: 100%;
+	height:auto;
 }
 
 
-/*responzivita menu */
-
-@media screen and (max-width: 800px){
-	#menu {position:relative}
-	#menu ul {background:#111;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none}
-	#menu li {display:block;float:none;width:auto;}
-	#menu input, #menu label {position:absolute;top:0;left:0;display:block}
-	#menu input {z-index:4}
-	#menu input:checked + label {color:white}
-	#menu input:checked + label:before {content:"\00d7"}
-	#menu input:checked ~ ul {display:block}
-}
-
-/* úvodní foto */
+/* -------------------------úvodní foto ------------------------------ */
 
 .jmena {
     background-image: url("obrazky/uvodni_foto.jpg");
@@ -130,24 +56,29 @@ p {
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
-    padding: 200px 0;
+	padding: 50px 0;
 }
 
-/* odpocet */
+.jmena p{
+	font-family: 'Euphoria Script', cursive;;
+    text-shadow: -1px -2px 4px rgba(252, 193, 115, 1),2px 11px 11px rgba(255, 195, 116, 1);
+	font-size: 60px;
+}
+
+/* ------------------odpocet------------------ */
 
 #odpocet {
     font-size: 30px;
 }
 
-
-/* sekce */
+/* ----------------- sekce ------------------- */
 
 
 section {
     padding: 20px;
 }
 
-.zakladni, .harmonogram {
+.zakladni, .harmonogram, .fotografie {
     background-color: var(--barva-zluta);
     color: var(--barva-modra);
 }
@@ -157,19 +88,278 @@ section {
     color: var(--barva-zluta);
 }
 
+
+
+/* --------------- základní info  -------------------- PO5EŠIT VELIKOSTI OBRAZKU */
+
+
+.z_img {
+	flex-shrink: 0;
+	margin: 2%;
+	width: 300px;
+	padding-top: 5%;
+}
+
+.z {
+	padding: 20px;
+}
+
+
+/* pocitac */
+
+@media (min-width:700px) {
+
+.z {
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.jidlo, .dresscode, .koureni {
+	flex-direction: row-reverse;
+}
+
+.zi {
+	width: 50%;
+	padding: 0;
+	flex-shrink: 0;
+}
+
+.zp {
+	width:50%;
+	padding: 0;
+	text-align: center;
+}
+}
+
+
 /* harmonogram */
 
-table {
-    width: 80%; 
-    margin-left:25%; 
-    margin-right:25%;
-    font-weight: lighter;
+.tabulka {
+	align-content: center;
 }
 
-.levy {
-    text-align: right;
+
+table {
+	border-collapse: collapse;
+	margin: 0 auto;
 }
+  
+  td {
+	border: 1px solid var(--barva-modra);
+	padding: 8px;
+  }
+  
+  table.dcf-table-bordered td:first-child {
+	border-left: none;
+  }
+  
+  table.dcf-table-bordered td:last-child {
+	border-right: none;
+  }
+  
+  table.dcf-table-bordered tr:first-child td {
+	border-top: none;
+  }
+  
+  table.dcf-table-bordered tr:last-child td {
+	border-bottom: none;
+  }
 
 .pravy {
     text-align: left;
+  }
+
+/* Osoby */
+
+
+	.manzele {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	
+	.manzele-profil {
+		margin:30px;
+		background-color: var(--barva-zluta);
+		text-align: center;
+		flex-grow: 0;
+		flex-shrink: 0;
+		flex-basis: calc(50% - 60px);
+		max-width: 300px;
+		padding: 20px;
+	}
+	
+	.profil-obrazek {
+		display: block;
+		object-fit: cover;
+		border: 2px solid var(--barva-modra);
+		max-width: 100%;
+		height: auto;
+		/* margin: 0 20px; */
+
+	}
+	
+	.profil-kontakt {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	
+	.profil-nadpis {
+		color: var(--barva-modra);
+	}
+
+	.profil-telefon {
+		text-decoration: none;
+	}
+
+	.profil-text {
+		color: var(--barva-modra);
+	}
+
+
+
+
+/* osoby pocitac  */
+
+@media (max-width:768px) {
+	.manzele {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	  }
+	  
+	  .manzele-profil {
+		margin: 30px;
+		background-color: var(--barva-zluta);
+		text-align: center;
+		flex-grow: 0;
+		flex-shrink: 0;
+		flex-basis: 100%;
+		max-width: 400px;
+		padding: 0px 50px;
+	  }
+	  
+	}	  
+	  
+
+
+/* ---------------------- DRUZICKY ------------------------ */
+
+.druzicky {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  
+  .druzicky-profil {
+	background-color: var(--barva-zluta);
+	margin: 30px;
+	padding: 20px;
+	width: 100%;
+	max-width: 300px;
+  }
+
+
+
+/* druzicky tablet (dvě vedle sebe) */
+	  
+@media (min-width:768px) {
+
+.druzicky {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .druzicky-profil {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: calc(33.33% - 20px);
+    max-width: none;
+  }
 }
+
+/* druzicky PC (čtyři vedle sebe) */
+
+/* @media (min-width:800px) {
+
+	.druzicky {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		max-width: 1200px;
+		margin: 0 auto;
+	  }
+	
+	  .druzicky-profil {
+		margin-bottom: 20px;
+		width: calc(33.33% - 10px);
+		max-width: none;
+	  }
+
+} */
+
+/* ------------  SVEDCI  -------------*/
+
+.svedci {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  
+  .svedci-profil {
+	width: 100%;
+	background-color: var(--barva-zluta);
+	padding: 20px;
+	box-sizing: border-box;
+	margin: 30px;
+	max-width: 300px;
+  }
+
+  @media (min-width:768px) {
+
+	.svedci {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	  }
+	
+	  .svedci-profil {
+		margin-right: 20px;
+		margin-bottom: 20px;
+		width: calc(33.33% - 20px);
+		max-width: none;
+	  }
+	}
+
+
+/*   
+  .s-profil-nadpis {
+	margin-top: 0;
+  }
+  
+  .s-profil-obrazek {
+	display: block;
+	margin: 20px auto;
+	max-width: 100%;
+	height: auto;
+  }
+  
+  .s-profil-kontakt {
+	display: flex;
+	justify-content: center;
+  }
+  
+  .s-profil-telefon {
+	display: inline-block;
+	background-color: #ffffff;
+	color: #000000;
+	padding: 10px;
+	border-radius: 50%;
+	text-decoration: none;
+  } */
