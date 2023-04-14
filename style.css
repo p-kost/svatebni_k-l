@@ -53,9 +53,6 @@ img {
 	height:auto;
 }
 
-p {
-	font-size: 17px;
-}
 
 
 /* -------------------------úvodní foto ------------------------------ */
@@ -324,11 +321,20 @@ table {
   
   .svedci-profil {
 	width: 100%;
-	background-color: var(--barva-zluta);
+	background-color: var(--barva-modra);
+	border: 3px solid var(--barva-zluta);
 	padding: 20px;
 	box-sizing: border-box;
 	margin: 30px;
 	max-width: 300px;
+  }
+
+  .svedci-profil .profil-obrazek {
+	border-color: var(--barva-zluta);
+  }
+
+  .svedci-profil .profil-nadpis, .profil-text {
+	color: var(--barva-zluta);
   }
 
   @media (min-width:768px) {
