@@ -24,13 +24,19 @@ na modrém pozadí žlutý nadpis a text v bledě růžové
 body{
     text-align: center;
     font-family: 'EB Garamond', serif;
+	font-size: 17px;
 }
 
 h1 {
     font-family: 'Euphoria Script', cursive;
     margin: 0;
     padding: 15px;
-	font-size: 40px;
+	font-size: 70px;
+	font-weight: normal;
+}
+
+h2 {
+	font-weight: normal;
 }
 
 a {
@@ -45,6 +51,10 @@ a:hover {
 img {
 	font-weight: 100%;
 	height:auto;
+}
+
+p {
+	font-size: 17px;
 }
 
 
