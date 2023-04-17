@@ -24,7 +24,8 @@ na modrém pozadí žlutý nadpis a text v bledě růžové
 body{
     text-align: center;
     font-family: 'EB Garamond', serif;
-	font-size: 17px;
+	font-size: 19px;
+	overflow-x: hidden;
 }
 
 h1 {
@@ -68,14 +69,20 @@ img {
 
 .jmena p{
 	font-family: 'Euphoria Script', cursive;;
-    text-shadow: -1px -2px 4px rgba(252, 193, 115, 1),2px 11px 11px rgba(255, 195, 116, 1);
-	font-size: 60px;
+    /* text-shadow: -1px -2px 4px rgba(252, 193, 115, 1),2px 11px 11px rgba(255, 195, 116, 1); */
+	text-shadow: -1px -2px 4px white,2px 11px 11px white;
+	font-size: 80px;
 }
 
 /* ------------------odpocet------------------ */
 
+.countdown {
+	background-color: var(--barva-modra);
+}
+
 #odpocet {
     font-size: 30px;
+	color: var(--barva-text-zluta);
 }
 
 /* ----------------- sekce ------------------- */
@@ -97,48 +104,109 @@ section {
 
 
 
-/* --------------- základní info  -------------------- PO5EŠIT VELIKOSTI OBRAZKU */
+/* --------------- základní info  -------------------- */
 
 
-.z_img {
-	flex-shrink: 0;
-	margin: 2%;
-	width: 300px;
-	padding-top: 5%;
+.uvod {
+	text-align: center;
 }
-
-.z {
-	padding: 20px;
-}
-
 
 /* pocitac */
-
-@media (min-width:700px) {
+@media (min-width: 700px) {
+	.uvod {
+		padding: 0 20%;
+	}
+}
 
 .z {
-	display: flex;
-	position: relative;
-	align-items: center;
-	justify-content: space-evenly;
+	display: block;
+	padding: 0;
+}
+	
+.zi {
+	width: 100%;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+	
+.zp {
+	width: 100%;
+	text-align: justify;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+	
+.z_img {
+	width: 100%;
+	margin: 2% auto;
+	display: block;
 }
 
 .jidlo, .dresscode, .koureni {
 	flex-direction: row-reverse;
 }
 
-.zi {
-	width: 50%;
+
+
+
+/* pocitac */
+@media (min-width: 700px) {
+	.z {
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: space-evenly;
+	}
+	
+	.zi {
+	width: 40%;
 	padding: 0;
 	flex-shrink: 0;
-}
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	}
+	
+	.zp {
+	width: 60%;
+	text-align: justify;
+	margin: 0 5%;
+	}
+	
+    .ubytovani.hudba.foceni .zp {
+		margin-left: 10%;
+	}
 
-.zp {
-	width:50%;
-	padding: 0;
-	text-align: center;
-}
-}
+	.jidlo.dresscode.koureni .zp {
+		margin-right: 10%;
+	}
+
+	.z_img {
+	margin: 2% auto;
+	width: 100%;
+	max-width: 400px;
+	padding: 8%;
+	}
+	}
+
+/* -----------------mapa ---------------*/
+
+.mapa {
+	position: relative;
+	max-width: 500px;
+	padding-bottom: 35%;
+	margin: 0 auto;
+  }
+  
+  .mapa iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  }
 
 
 /* harmonogram */
@@ -152,6 +220,12 @@ table {
 	border-collapse: collapse;
 	margin: 0 auto;
 }
+
+td {
+	padding: 8px;
+}
+
+/* 
   
   td {
 	border: 1px solid var(--barva-modra);
@@ -172,210 +246,74 @@ table {
   
   table.dcf-table-bordered tr:last-child td {
 	border-bottom: none;
-  }
+  } */
 
 .pravy {
     text-align: left;
   }
 
-/* Osoby */
 
 
-	.manzele {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-wrap: wrap;
-	}
-	
-	.manzele-profil {
-		margin:30px;
-		background-color: var(--barva-zluta);
-		text-align: center;
-		flex-grow: 0;
-		flex-shrink: 0;
-		flex-basis: calc(50% - 60px);
-		max-width: 300px;
-		padding: 20px;
-	}
-	
-	.profil-obrazek {
-		display: block;
-		object-fit: cover;
-		border: 2px solid var(--barva-modra);
-		max-width: 100%;
-		height: auto;
-		/* margin: 0 20px; */
+/* ---------------- OSOBY ----------------------------- */
 
-	}
-	
-	.profil-kontakt {
-		margin-top: 10px;
-		margin-bottom: 10px;
-	}
-	
-	.profil-nadpis {
-		color: var(--barva-modra);
-	}
-
-	.profil-telefon {
-		text-decoration: none;
-	}
-
-	.profil-text {
-		color: var(--barva-modra);
-	}
-
-
-
-
-/* osoby pocitac  */
-
-@media (max-width:768px) {
-	.manzele {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	  }
-	  
-	  .manzele-profil {
-		margin: 30px;
-		background-color: var(--barva-zluta);
-		text-align: center;
-		flex-grow: 0;
-		flex-shrink: 0;
-		flex-basis: 100%;
-		max-width: 400px;
-		padding: 0px 50px;
-	  }
-	  
-	}	  
-	  
-
-
-/* ---------------------- DRUZICKY ------------------------ */
-
-.druzicky {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-  }
-  
-  .druzicky-profil {
-	background-color: var(--barva-zluta);
-	margin: 30px;
-	padding: 20px;
-	width: 100%;
-	max-width: 300px;
-  }
-
-
-
-/* druzicky tablet (dvě vedle sebe) */
-	  
-@media (min-width:768px) {
-
-.druzicky {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .druzicky-profil {
-    margin-right: 20px;
-    margin-bottom: 20px;
-    width: calc(33.33% - 20px);
-    max-width: none;
-  }
+.osoby-obal {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* druzicky PC (čtyři vedle sebe) */
 
-/* @media (min-width:800px) {
+.osoby-profil {
+    background-color: var(--barva-zluta);
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
+	margin-bottom: 20px;
+}
 
-	.druzicky {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: flex-start;
-		flex-wrap: wrap;
-		max-width: 1200px;
-		margin: 0 auto;
-	  }
-	
-	  .druzicky-profil {
-		margin-bottom: 20px;
-		width: calc(33.33% - 10px);
-		max-width: none;
-	  }
+.profil-obrazek {
+    display: block;
+    object-fit: cover;
+    border: 2px solid var(--barva-modra);
+    max-width: 100%;
+    height: auto;
+}
 
-} */
+.profil-kontakt {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
-/* ------------  SVEDCI  -------------*/
+.profil-nadpis, .profil-text {
+    color: var(--barva-modra);
+}
 
-.svedci {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-  }
-  
-  .svedci-profil {
-	width: 100%;
-	background-color: var(--barva-modra);
-	border: 3px solid var(--barva-zluta);
-	padding: 20px;
-	box-sizing: border-box;
-	margin: 30px;
-	max-width: 300px;
-  }
+.profil-telefon {
+    text-decoration: none;
+}
 
-  .svedci-profil .profil-obrazek {
-	border-color: var(--barva-zluta);
-  }
+/* pro pc: */
 
-  .svedci-profil .profil-nadpis, .profil-text {
-	color: var(--barva-zluta);
-  }
+@media (min-width:768px) {
 
-  @media (min-width:768px) {
-
-	.svedci {
+	.osoby-obal {
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: center;
-	  }
-	
-	  .svedci-profil {
+	}
+
+	.osoby-profil {
 		margin-right: 20px;
 		margin-bottom: 20px;
 		width: calc(33.33% - 20px);
 		max-width: none;
-	  }
 	}
 
+	.druzicky-profil {
+		margin-right: 20px;
+		margin-bottom: 20px;
+		width: calc(25% - 20px);
+		max-width: none;
+	}
+	  }
 
-/*   
-  .s-profil-nadpis {
-	margin-top: 0;
-  }
-  
-  .s-profil-obrazek {
-	display: block;
-	margin: 20px auto;
-	max-width: 100%;
-	height: auto;
-  }
-  
-  .s-profil-kontakt {
-	display: flex;
-	justify-content: center;
-  }
-  
-  .s-profil-telefon {
-	display: inline-block;
-	background-color: #ffffff;
-	color: #000000;
-	padding: 10px;
-	border-radius: 50%;
-	text-decoration: none;
-  } */
