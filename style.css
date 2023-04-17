@@ -107,14 +107,17 @@ section {
 /* --------------- základní info  -------------------- */
 
 
-.uvod {
+.uvod, .posledni {
 	text-align: center;
 }
 
 /* pocitac */
 @media (min-width: 700px) {
-	.uvod {
-		padding: 0 20%;
+	.uvod, .posledni {
+		padding: 2% 20%;
+	}
+	.posledni {
+		font-size: 21px;
 	}
 }
 
@@ -142,6 +145,7 @@ section {
 	width: 100%;
 	margin: 2% auto;
 	display: block;
+	border: 1px solid var(--barva-modra);
 }
 
 .jidlo, .dresscode, .koureni {
@@ -316,4 +320,7 @@ td {
 		max-width: none;
 	}
 	  }
+
+
+
 
