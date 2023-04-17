@@ -68,7 +68,7 @@ img {
 }
 
 .jmena p{
-	font-family: 'Euphoria Script', cursive;;
+	font-family: 'Euphoria Script', cursive;
     /* text-shadow: -1px -2px 4px rgba(252, 193, 115, 1),2px 11px 11px rgba(255, 195, 116, 1); */
 	text-shadow: -1px -2px 4px white,2px 11px 11px white;
 	font-size: 80px;
@@ -81,8 +81,9 @@ img {
 }
 
 #odpocet {
-    font-size: 30px;
+    font-size: 70px;
 	color: var(--barva-text-zluta);
+	font-family: 'Euphoria Script', cursive;
 }
 
 /* ----------------- sekce ------------------- */
