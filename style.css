@@ -107,10 +107,10 @@ img {
 }
 
 #odpocet {
-    font-size: 35px;
+    font-size: 30px;
 	color: var(--barva-text-zluta);
 	font-family: 'EB Garamond', serif;
-	margin: 10px 0;
+	margin: 6px 0;
 }
 
 /* ----------------- sekce ------------------- */
@@ -173,7 +173,7 @@ section {
 	width: 100%;
 	margin: 2% auto;
 	display: block;
-	border: 1px solid var(--barva-modra);
+	border: 2px solid var(--barva-modra);
 }
 
 .jidlo, .dresscode, .koureni {
@@ -219,7 +219,7 @@ section {
 	margin: 2% auto;
 	width: 100%;
 	max-width: 400px;
-	padding: 8%;
+/*	padding: 8%;  */
 	}
 	}
 
@@ -348,6 +348,22 @@ td {
 		max-width: none;
 	}
 	  }
+
+
+
+.dodavatele {
+	padding-bottom: 50px;
+}
+
+
+.dodavatele_seznam a {
+	color: var(--barva-zluta);	
+}
+
+.dodavatele_seznam a:hover {
+	color: var(--barva-modra);
+	background-color: var(--barva-zluta);
+}
 
 
 

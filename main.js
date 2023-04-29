@@ -24,6 +24,18 @@ var x = setInterval(function() {
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "";
+    document.getElementById("demo").innerHTML = "Už jsme svoji!";
   }
 }, 1000);
+
+
+// HAMBURGER MENU
+
+const checkboxToggle = document.getElementById('checkbox_toggle');
+const menu = document.querySelector('.menu');
+
+menu.addEventListener('click', () => {
+  if (checkboxToggle.checked) {
+    checkboxToggle.checked = false;
+  }
+});
