@@ -365,6 +365,10 @@ td {
 	background-color: var(--barva-zluta);
 }
 
+.dodavatele_seznam p {
+	padding: 10px;
+}
+
 
 
 
